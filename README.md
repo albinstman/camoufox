@@ -242,12 +242,12 @@ Special offer: Use code CAMOUFOX35 to get 35% discount on Proxies.
   </tr>
   <tr>
     <td width="25%" align="center" valign="middle">
-      <a href="https://proxidize.com" target="_blank">
+      <a href="https://proxidize.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=camoufox&utm_content=daijro" target="_blank">
         <img width="380" alt="proxidize" src="https://imagedelivery.net/r4caA8hJ3Ww3j8uyC_NNCA/95a9137a-43fd-48d4-7243-983f3f4a3d00/public"/>
       </a>
     </td>
     <td valign="middle">
-      <strong><a href="https://proxidize.com">Proxidize</a> | Mobile and Residential Proxies for Camoufox</strong><br>
+      <strong><a href="https://proxidize.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=camoufox&utm_content=daijro">Proxidize</a> | Mobile and Residential Proxies for Camoufox</strong><br>
       Running Camoufox at scale? Your browser setup is only half the stack. Your proxy layer matters too.<br>
       Proxidize provides mobile and residential proxies built for scraping, browser automation, SEO monitoring, AI agents, and data collection workflows.<br>
       <strong>Why Proxidize?</strong><br>
@@ -260,7 +260,7 @@ Special offer: Use code CAMOUFOX35 to get 35% discount on Proxies.
       • No hardware or DIY setup required<br>
       Built for teams that need reliable proxy infrastructure without managing devices, servers, or proxy rotation themselves.<br>
       <strong>Special offer for Camoufox users</strong>: Use code <strong>CAMOUFOX20</strong> for <strong>20% off</strong>.<br>
-      Start now: https://proxidize.com
+      Start now: <a href="https://proxidize.com/?utm_source=github&utm_medium=sponsorship&utm_campaign=camoufox&utm_content=daijro">https://proxidize.com</a>
     </td>
   </tr>
 </table>

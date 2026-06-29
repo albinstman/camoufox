@@ -77,6 +77,10 @@ pageTypes.Size = {
 pageTypes.Viewport = {
   viewportSize: pageTypes.Size,
   deviceScaleFactor: t.Optional(t.Number),
+  // Playwright >=1.61 sends viewport.isMobile in Browser.setDefaultViewport.
+  // Accept it so newer drivers don't fail protocol validation. The flag is
+  // currently not used for emulation by this Juggler build.
+  isMobile: t.Optional(t.Boolean),
 };
 
 pageTypes.DOMQuad = {

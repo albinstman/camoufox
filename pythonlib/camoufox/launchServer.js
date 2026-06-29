@@ -1,7 +1,16 @@
-// Workaround that accesses Playwright's undocumented `launchServer` method in Python
-// Without having to use the Node.js Playwright library.
+// Launches a Playwright BrowserServer for Camoufox from Python, without using
+// the Node.js Playwright library directly.
+//
+// camoufox/server.py runs this script with the working directory set to
+// Playwright's bundled driver package (`<driver>/package`), so requiring that
+// directory loads playwright-core's PUBLIC API. We use the public
+// `firefox.launchServer()` entry point rather than reaching into Playwright
+// internals: the previous implementation required `./lib/browserServerImpl.js`,
+// which Playwright REMOVED in 1.60.0 (folded into coreBundle.js), breaking the
+// server on every Playwright >=1.60. The public surface is stable across
+// versions (verified 1.51 through 1.61).
 
-const { BrowserServerLauncherImpl } = require(`${process.cwd()}/lib/browserServerImpl.js`)
+const { firefox } = require(process.cwd());
 
 function collectData() {
     return new Promise((resolve) => {
@@ -21,11 +30,9 @@ function collectData() {
 collectData().then((options) => {
     console.time('Server launched');
     console.info('Launching server...');
-    
-    const server = new BrowserServerLauncherImpl('firefox')
-    
-    // Call Playwright's `launchServer` method
-    server.launchServer(options).then(browserServer => {
+
+    // Call Playwright's public `launchServer` method.
+    firefox.launchServer(options).then(browserServer => {
         console.timeEnd('Server launched');
         console.log('Websocket endpoint:\x1b[93m', browserServer.wsEndpoint(), '\x1b[0m');
         // Continue forever
